@@ -6,6 +6,8 @@ import Login from './components/Login/Login';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <PrivateRoute exact path="/placeOrder/:id">
+              <PlaceOrder />
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
