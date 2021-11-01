@@ -1,3 +1,9 @@
+# Welcome to travel around the world site..
+## => Here you can book your favorite places for your holyday
+## => Sign in using google to view details
+## => It's a travel related website
+## => Learn more about us in pages
+## -> Contact us for more details
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
