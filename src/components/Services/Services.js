@@ -11,7 +11,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(_ => {
         setIsLoading(true)
-        fetch(`http://localhost:5000/services`)
+        fetch(`https://pure-eyrie-28741.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => {
                 setServices(data)
@@ -24,7 +24,7 @@ const Services = () => {
         data.email = user?.email;
         data.status = "pending";
         console.log(data);
-        fetch('http://localhost:5000/myBookings', {
+        fetch('https://pure-eyrie-28741.herokuapp.com/myBookings', {
             method: 'POST',
             header: { "content-type": "application/json" },
             body: JSON.stringify(data)

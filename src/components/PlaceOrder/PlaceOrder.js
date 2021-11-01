@@ -12,7 +12,7 @@ const PlaceOrder = (props) => {
     const [place, setPlace] = useState();
     console.log(place);
     useEffect(_ => {
-        fetch('http://localhost:5000/services')
+        fetch('https://pure-eyrie-28741.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setPlaces(data));
     }, []);
