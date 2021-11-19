@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
@@ -20,9 +21,9 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <Container className="mt-5" style={{ height: "50vh" }}>
             <button onClick={handleGoogleSignIn} className="btn btn-dark">Google Sign In</button>
-        </div>
+        </Container>
     );
 };
 
