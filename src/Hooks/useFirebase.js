@@ -8,14 +8,13 @@ firebaseAuthentication();
 const useFirebase = _ => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = false;
+
     const auth = getAuth();
 
     // Google Sign In
     const signInUsingGoogle = _ => {
-        setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
-        return (signInWithPopup(auth, googleProvider));
+        return signInWithPopup(auth, googleProvider);
     }
 
     useEffect(() => {
@@ -38,9 +37,7 @@ const useFirebase = _ => {
     return {
         user,
         setUser,
-        setIsLoading,
         error,
-        isLoading,
         setError,
         signInUsingGoogle,
         logOut
