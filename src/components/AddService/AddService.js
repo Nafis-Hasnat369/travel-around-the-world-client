@@ -8,7 +8,7 @@ export default function AddProduct() {
     const [success, setSuccess] = useState(false);
     const onSubmit = data => {
         setSuccess(false);
-        fetch(`http://https://pure-eyrie-28741.herokuapp.com/addServices`, {
+        fetch(`https://pure-eyrie-28741.herokuapp.com/addServices`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)

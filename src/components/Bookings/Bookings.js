@@ -11,7 +11,7 @@ const Bookings = () => {
     const [bookingData, setBookingData] = useState({});
     const [acknowledged, setAcknowledged] = useState(false);
     useEffect(_ => {
-        fetch(`http://https://pure-eyrie-28741.herokuapp.com/singleProduct/${id}`)
+        fetch(`https://pure-eyrie-28741.herokuapp.com/singleProduct/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [id]);
@@ -29,7 +29,7 @@ const Bookings = () => {
         bookingData.customerName = user?.displayName;
         bookingData.email = user.email;
         bookingData.status = "pending";
-        fetch(`http://https://pure-eyrie-28741.herokuapp.com/confirmOrder`, {
+        fetch(`https://pure-eyrie-28741.herokuapp.com/confirmOrder`, {
             method: 'POST',
             headers: { "content-type": "application/json" },
             body: JSON.stringify(bookingData)

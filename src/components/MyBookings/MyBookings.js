@@ -10,7 +10,7 @@ const MyBookings = () => {
     const [myOrders, setMyOrders] = useState([]);
     const [deletedCount, setDeletedCount] = useState(false);
     useEffect(_ => {
-        fetch(`http://https://pure-eyrie-28741.herokuapp.com/myOrders/${user?.email}`)
+        fetch(`https://pure-eyrie-28741.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyOrders(data);
@@ -21,7 +21,7 @@ const MyBookings = () => {
         // eslint-disable-next-line no-restricted-globals
         const result = confirm("Are you sure you want to cancel this order");
         if (result) {
-            fetch(`http://https://pure-eyrie-28741.herokuapp.com/cancelOrder/${id}`, {
+            fetch(`https://pure-eyrie-28741.herokuapp.com/cancelOrder/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
